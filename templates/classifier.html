@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}" />
+    <title>Ship Classifier</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/classty.css') }}">
+    
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/marsa maroc-logo.png') }}" alt="Logo"></a>
+          </div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('history') }}">History</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+          <li><a href="{{ url_for('myjourney') }}">Creator</a></li>
+          <li><a href="{{ url_for('Contact') }}">Contact Us</a></li>
+          </ul>
+        <div class="nav-image">
+            <img src="{{ url_for('static', filename='images/ys.png') }}" alt="Nav Image">
+        </div>
+    </nav>
+    <div id="contentContainer">
+        <div class="welcomeSection">
+            <img src="{{ url_for('static', filename='images/convert.jpg') }}" alt="Ship Image" class="welcomeImage">
+            <div class="welcomeText">
+                <h1>Welcome to the Ship Classifier</h1>
+            </div>
+        </div>
+        <div class="infoSection">
+            <div class="frame infoFrame" id="infoFrame">
+                <h2>Machine Learning Explanation</h2>
+                <p>This application harnesses the power of advanced machine learning algorithms to accurately determine if an uploaded image contains a ship. By integrating state-of-the-art deep learning models, our system is capable of swiftly and precisely analyzing visual data. The technology behind this application not only identifies ships with remarkable accuracy but also demonstrates the incredible potential of AI in image recognition. Upload an image to experience firsthand how our sophisticated algorithms process and interpret visual information in real-time. Whether for maritime surveillance or other applications, witness the impressive capabilities of modern AI as it brings you reliable and insightful results with just a few clicks.</p>
+                <button id="testButton">Test</button>
+            </div>
+            <div class="frame uploadFrame" id="uploadFrame" style="display: none;">
+                <h2>Ship Classifier</h2>
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <label for="file">Upload an image</label>
+                        <input type="file" class="form-control-file" id="file" name="file">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
+                <div class="resultSection" id="predictionResult" style="display: none;">
+                    <h3 id="predictionText">Prediction: </h3>
+                    <img id="uploadedImage" alt="Uploaded Image" class="uploadedImage">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel">
+        <button class="carousel-button left">&lt;</button>
+        <div class="carousel-slide">
+            <div class="carousel-item active">
+                <h2><i class="fas fa-ship"></i> How it works:</h2>
+                <p>Upload an image, and our AI model will analyze it to determine if it contains a ship. </p>
+                     <p>The results are quick and accurate, helping you identify ships effortlessly.</p>
+            </div>
+            <div class="carousel-item">
+                <h2><i class="fas fa-cogs"></i> Why use our classifier?</h2>
+                <p>Our classifier is built using the latest machine learning algorithms, ensuring high accuracy and reliability.</p>
+                     <p>Whether you are in the shipping industry or just curious, our tool is designed to meet your needs.</p>
+            </div>
+            <div class="carousel-item">
+                <h2><i class="fas fa-play"></i> Get Started</h2>
+                <p>Click the upload button to select an image, and let our classifier do the rest !</p>
+            </div>
+        </div>
+        <button class="carousel-button right">&gt;</button>
+    </div>
+    <script defer src="{{ url_for('static', filename='js/ship.js') }}"></script>
+    <footer id="copyright">
+        <p>&copy;2024 by Yasmine Ouazzine</p>
+    </footer>
+</body>
+</html>

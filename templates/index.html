@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}" />
+  <title>SeaSight</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div id="carousel">
+    <div id="imageContainer">
+      <div id="superContainer">
+        <img class="image slide" id="image-0" src="{{ url_for('static', filename='images/first.png') }}" alt="" />
+        <img class="image slide" id="image-1" src="{{ url_for('static', filename='images/second.png') }}" alt="" />
+        <img class="image slide" id="image-2" src="{{ url_for('static', filename='images/third.jpg') }}" alt="" />
+      </div>
+      <nav>
+        <div class="logo">
+            <a href="#"><img src="{{ url_for('static', filename='images/marsa maroc-logo.png') }}" alt="Logo" /></a>
+        </div>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('history') }}">History</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('myjourney') }}">Creator</a></li>
+        <li><a href="{{ url_for('Contact') }}">Contact Us</a></li>
+        </ul>
+      </nav>    
+      <div id="navButtons">
+        <button id="leftArrow" name="left" onclick="move('left')">
+          <img src="{{ url_for('static', filename='images/icon-angle-left.svg') }}" alt="Left Arrow" />
+        </button>
+        <button id="rightArrow" name="right" onclick="move('right')">
+          <img src="{{ url_for('static', filename='images/icon-angle-right.svg') }}" alt="Right Arrow" />
+        </button>
+      </div>
+    </div>
+    <div id="descriptionContainer">
+      <div id="descriptions">
+        <div class="desc slide" id="desc-0">
+          <h1>Experience the Future of Maritime Surveillance</h1>
+          <p>Our platform combines advanced technology and machine learning to provide accurate ship detection in sea images. Explore the capabilities of SeaSight and how it can enhance maritime safety and security.</p>
+        </div>
+        <div class="desc slide" id="desc-1">
+          <h1>Global Reach with Local Impact</h1>
+          <p>With our innovative solution, you can monitor seas across the globe from the comfort of your local office. Our machine learning models are trained to detect ships in diverse maritime environments, ensuring reliable performance wherever you are.</p>
+        </div>
+        <div class="desc slide" id="desc-2">
+          <h1>Built with Cutting-Edge Technology</h1>
+          <p>SeaSight utilizes state-of-the-art machine learning algorithms and high-quality image processing techniques to provide unmatched accuracy in ship detection. Our platform is designed to meet the needs of modern maritime operations.</p>
+        </div>
+      </div>
+      <a id="shop" href="{{ url_for('classifier') }}">
+        SeaSight Classifier <img src="{{ url_for('static', filename='images/icon-arrow.svg') }}" alt="Arrow" />
+      </a>    
+    </div>
+  </div>
+  <div id="footer">
+    <img class="footerImages" id="footerLeftImage" alt="" src="{{ url_for('static', filename='images/darker one.png') }}" />
+    <div id="footerDesc">
+      <h2>SeaSight by Yasmine Ouazzine</h2>
+      As a third-year student at ENSEM School of Software Engineering, I am proud to present this sea sighting project. Combining development and machine learning, this project showcases the integration of cutting-edge technology in maritime applications. Join us on this exciting journey as we explore new horizons in sea sighting.
+    </div>
+    <img class="footerImages" id="footerRightImage" alt="" src="{{ url_for('static', filename='images/marsamaroc (1).jpg') }}" />
+  </div>
+  <!-- Cookie consent popup -->
+
+  <script defer src="{{ url_for('static', filename='js/script.js') }}" onload="init()"></script>
+  
+  <div id="cookieConsent">
+    <p>Welcome to my website! I am delighted to have you here and hope you find valuable insights during your visit.  Your presence is greatly appreciated by both Me and MarsaMaroc.                       If you have any Feedback just click on <a href="#">Contact Us</a></p>
+        
+    <button id="acceptCookie">OK</button>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,464 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1440px;
+    max-height: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.1px;
+    color: hsl(0, 0%, 63%);
+    font-family: "League Spartan", serif;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/static/images/port.jpg') no-repeat center center/cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 45px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: black;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 42px;
+    text-transform: uppercase;
+    letter-spacing: 6.55px;
+    color: black;
+}
+
+body > div {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Nav and Nav ul updated */
+nav {
+    margin-top: 50px;
+    margin-left: 64px;
+    width: 100%; /* Ensure the nav takes the full width */
+    color: white;
+    position: relative;
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align everything to the left */
+    padding-right: 50px; /* Padding on the right for spacing */
+}
+
+nav img {
+    height: 40px;
+    width: auto;
+    margin-right: 20px; /* Reduced margin-right to bring the text closer to the logo */
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start; /* Align the items directly next to the logo */
+    width: auto; /* Remove width restriction */
+    gap: 40px; /* Maintain gap between the menu items */
+}
+
+.underline {
+    height: 16px;
+    width: 16px;
+    background-color: white;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+    position: relative;
+    margin: 0; /* Remove extra auto margin */
+}
+
+li:after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: 125%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width .3s ease-in-out;
+}
+
+/* Hover effect for underline */
+li:hover:after {
+    width: 50%; /* Underline appears on hover */
+}
+
+/* Link styles */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffda00; /* Optional hover color change for links */
+}
+
+.mobile,
+input[type="checkbox"] {
+    display: none;
+}
+
+#carousel {
+    width: 100vw;
+    height: 66.75vh;
+    max-height: 532px;
+    position: relative;
+    display: flex;
+}
+
+#imageContainer {
+    width: 58.33%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#superContainer {
+    width: 58.33%;
+    height: 100%;
+    position: absolute;
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.image:nth-child(n) {
+    z-index: -1;
+}
+
+.image:first-child {
+    z-index: 0;
+}
+
+#navButtons {
+    position: relative;
+    text-align: right;
+    display: inline-flex;
+    justify-content: flex-end;
+    height: 80px;
+    right: -19.04%;
+    z-index: 1;
+}
+
+button {
+    height: 100%;
+    width: 9.52%;
+    background-color: black;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 27%);
+}
+
+#leftArrow {
+    background-image: url(../images/icon-angle-left.svg);
+}
+
+#rightArrow {
+    background-image: url(../images/icon-angle-right.svg);
+}
+
+#descriptionContainer {
+    width: 41.67%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: transparent;
+}
+
+#descriptions {
+    height: 43.2%;
+    margin-top: 19.25%;
+    width: 100%;
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    background: transparent;
+}
+
+.desc {
+    background: transparent;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 66.803%;
+    padding-left: 16.66%;
+    padding-right: 16.737%;
+    height: 100%;
+    justify-content: space-around;
+    transition: transform 0.5s;
+}
+
+.desc:nth-child(n) {
+    z-index: -1;
+}
+
+.desc:first-child {
+    z-index: 0;
+    opacity: 1;
+}
+
+#shop {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 8px;
+    font-weight: 600;
+    padding-left: 16.67%;
+    line-height: 55px;
+}
+
+#shop:hover {
+    color: hsl(0, 0%, 63%);
+}
+
+#shop:hover img {
+    filter: brightness(0) saturate(100%) invert(69%) sepia(0%) saturate(284%) hue-rotate(66deg) brightness(94%) contrast(91%);
+}
+
+/* Existing CSS here */
+
+#footer {
+    width: 100vw;
+    height: 33.25vh;
+    max-height: 268px;
+    display: inline-flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+#footerLeftImage {
+    background-image: url(../images/image-about-dark.jpg);
+    background-size: cover;
+}
+
+#footerRightImage {
+    background-image: url(../images/image-about-light.jpg);
+    background-size: cover;
+}
+
+#footerDesc {
+    width: auto;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+
+@media(max-width: 767px) {
+    #carousel {
+        flex-direction: column;
+        height: auto;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 36px;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+    button {
+        height: 56px;
+        width: 56px;
+    }
+
+    #footer {
+        flex-direction: column;
+    }
+
+    .mobile {
+        display: flex;
+        width: 17.5%;
+        flex-shrink: 1;
+    }
+
+    #humbergerMenu {
+        margin: auto;
+    }
+
+    #logo {
+        display: flex;
+        margin-right: 42.5%;
+    }
+
+    nav {
+        margin: 0;
+        width: 100%;
+        height: 110px;
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        top: -100%;
+        height: 110px;
+        width: 78%;
+        padding-left: 22%;
+        transition: top 0.3s;
+        background-color: white;
+    }
+
+    li a {
+        color: black;
+        font-weight: 700;
+        letter-spacing: -1px;
+    }
+
+    .toggle:checked~ul {
+        top: 0%;
+    }
+
+    .toggle:checked~label img {
+        content: url("../images/icon-close.svg");
+        z-index: 2;
+    }
+
+    #imageContainer,
+    #superContainer,
+    #descriptionContainer,
+    .footerImages,
+    #footerDesc {
+        width: 100%;
+    }
+
+    #imageContainer {
+        height: 365px;
+    }
+
+    #superContainer {
+        height: 365px;
+    }
+
+    #descriptionContainer {
+        height: 410px;
+    }
+
+    #descriptions {
+        margin-top: 15%;
+        height: 230px;
+    }
+
+    .desc {
+        padding-left: 8.5%;
+        padding-right: 8.5%;
+        width: 83%;
+    }
+
+    #shop {
+        padding-left: 8.5%;
+        line-height: 85px;
+    }
+
+    #image-0 {
+        content: url("../images/mobile-image-hero-1.jpg");
+    }
+
+    #image-1 {
+        content: url("../images/mobile-image-hero-2.jpg");
+    }
+
+    #image-2 {
+        content: url("../images/mobile-image-hero-3.jpg");
+    }
+}
+/* Cookie Consent Popup */
+#cookieConsent {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+#cookieConsent p {
+  display: inline;
+  margin-right: 20px;
+}
+
+#cookieConsent a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+#cookieConsent button {
+  background-color: #ffd700;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#cookieConsent button:hover {
+  background-color: #ffda00;
+}

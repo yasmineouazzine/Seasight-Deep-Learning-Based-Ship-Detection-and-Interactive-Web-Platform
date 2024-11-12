@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.1px;
+    color: hsl(0, 0%, 63%);
+    font-family: "League Spartan", serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/static/images/port.jpg') no-repeat center center/cover;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px; /* Adjust to match index.html */
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 45px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: black;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 42px;
+    text-transform: uppercase;
+    letter-spacing: 6.55px;
+    color: black;
+}
+
+nav {
+    margin-top: 50px;
+    margin-left: 64px;
+    width: calc(100% - 64px);
+    color: black;
+    position: relative;
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+nav img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-image {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.nav-image img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+    position: relative;
+    margin: 0 20px;
+}
+
+li:after {
+    content: "";
+    position: absolute;
+    margin-left: 25%;
+    margin-bottom: 25%;
+    left: 0;
+    top: 125%;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width .3s ease-in-out;
+}
+
+li:hover:after {
+    width: 50%;
+}
+
+.mobile,
+input[type="checkbox"] {
+    display: none;
+}
+
+#aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    flex: 1; /* Allow the container to grow and fill the available space */
+}
+
+.introText {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.introText p {
+    font-size: 14px; /* Make the text smaller */
+    color: black;
+}
+
+.aboutSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+    width: 80%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.aboutSection:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.aboutSection:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.aboutSection:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.aboutImage {
+    flex: 1;
+    max-width: 250px; /* Adjust the width */
+    max-height: 300px; /* Adjust the height */
+    margin-right: 20px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.aboutImage:hover {
+    transform: scale(1.05);
+}
+
+.aboutText {
+    flex: 2;
+    color: black;
+}
+
+.aboutText h1 {
+    margin-bottom: 10px;
+}
+
+.aboutText p {
+    font-size: 14px; /* Make the text smaller */
+    line-height: 1.6;
+}
+
+#copyright {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: static; /* Change to static */
+    margin-top: auto; /* Push the footer to the bottom of the page */
+}
+
+#copyright p {
+    margin: 0;
+    font-size: 14px;
+}
+
+@media(max-width: 767px) {
+    nav {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .aboutSection {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aboutImage {
+        margin-bottom: 20px;
+    }
+
+    .aboutText p {
+        font-size: 16px;
+    }
+}
+
+/* Additional CSS for history.html */
+.historyImageWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    margin-top: 0; /* Remove any top margin to align right under the navigation bar */
+}
+
+.historyImage {
+    width: 100%;
+    height: auto;
+    opacity: 0.8; /* Reduce transparency */
+}
+
+.historyText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 48px; /* Adjust font size as needed */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: white;
+    width: 50%;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::after, .right::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 15px;
+    background-color: white;
+    border: 4px solid #FFC107;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left::after {
+    left: -17px;
+}
+
+.right::after {
+    right: -17px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}

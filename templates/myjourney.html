@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+  <title>My Journey</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/journey.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/marsa maroc-logo.png') }}" alt="Logo"></a>
+    </div>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('history') }}">History</a></li>
+    <li><a href="{{ url_for('about') }}">About Us</a></li>
+    <li><a href="{{ url_for('myjourney') }}">Creator</a></li>
+    <li><a href="{{ url_for('Contact') }}">Contact Us</a></li>
+    </ul>
+    <div class="nav-image">
+      <img src="{{ url_for('static', filename='images/ys.png') }}" alt="Nav Image">
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="internship-description">
+      <h2>Internship Insights</h2>
+      <p>The following sections highlight the key technologies and skills I've engaged with during my internship. This overview provides insight into the important steps of the project, the technologies utilized, and the valuable skills I've gained throughout this experience.</p>
+  </div>
+    <div class="grid-2">
+      <div class="section-2">
+        <div class="creative-section about">
+          <h2>The Key Steps Of The Project</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-project-diagram"></i> <!-- Planning/Strategy icon -->
+              </div>
+              <div class="timeline-content">
+                <h3>Choosing The Perfect Dataset For my Project</h3>
+                <p>The Dataset Ship Satellite Images From Kaggle Contain shipsnet / scenes / shipsnet.json </p>
+                <span class="date">08/07/2024</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-code"></i> <!-- Development/Implementation icon -->
+              </div>
+              <div class="timeline-content">
+                <h3>Analyse And Train My Model and Use it For Plateform Integration</h3>
+                <p>After Optemizing and Training My Model I Reached A Model With 98% Accuracy  </p>
+                <span class="date">13-07-2024</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fas fa-rocket"></i> <!-- Launch/Completion icon -->
+              </div>
+              <div class="timeline-content">
+                <h3>Integration Of the Trained Model Using Flask Framework for Backend </h3>
+                <p>I Created A Plateform to Make It Easy For People to Visualize My Project And Test It As Well As send Me Their Feedback</p>
+                <span class="date">07/2024-09/2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="creative-section experience">
+          <h2>Worflow </h2>
+          <div class="experience-cards">
+            <div class="card">
+              <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+              <h3>System Design and Analysis</h3>
+              <p><strong>Unified Modeling Language to visualize, specify, and document the system's components.</strong> </p>
+              <ul>
+                <li>Requirement Gathering and Analysis</li>
+                <li>Use Case Diagram Creation,Class Diagram Development,Sequence Diagram Design,Activity Diagram Elaboration</li>
+                <li>Stakeholder Review and Feedback</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="fas fa-brain"></i></div>
+              <h3>Machine Learning Implementation</h3>
+              <p><strong>the intelligent core of our system, leveraging data to create predictive models</strong></p>
+              <ul>
+                <li>Dataset Collection and Preparation,Model Evaluation and Testing</li>
+                <li>Data Preprocessing and Feature Engineering,Hyperparameter Tuning</li>
+                <li>Model Selection (ANN, CNN),Model Training and Validation</li>
+
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+              <h3>Full-Stack Development</h3>
+              <p><strong>bring our design and machine learning model to life, creating a fully functional web application that users can interact with.</strong></p>
+              <ul>
+                <li>Backend Development with Flask</li>
+                <li>Frontend Development (HTML, CSS, JavaScript)</li>
+                <li>Integration of Trained ML Model,User Interface Design and Implementation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="creative-section skills">
+          <h2>Skills</h2>
+          <div class="skills-container">
+            <div class="skill-category">
+              <h3><i class="fas fa-code"></i> Programming Languages</h3>
+              <div class="skill-items">
+                <span class="skill-item">Python</span>
+                <span class="skill-item">Java</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3><i class="fas fa-tools"></i> Frameworks & Tools</h3>
+              <div class="skill-items">
+                <span class="skill-item">TensorFlow</span>
+                <span class="skill-item">PyTorch</span>
+                <span class="skill-item">Scikit-learn</span>
+                <span class="skill-item">Flask</span>
+              </div>
+            </div>
+            
+            <div class="skill-category">
+              <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+              <div class="skill-items">
+                <span class="skill-item">Pandas</span>
+                <span class="skill-item">NumPy</span>
+                <span class="skill-item">TensorFlow</span>
+                <span class="skill-item">Keras</span>
+                <span class="skill-item">Kaggle Datasets</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="creative-section technologies">
+          <h2>Languages for Future Improvement</h2>
+          <div class="tech-showcase">
+            <div class="tech-category">
+              <h3>Frontend</h3>
+              <div class="tech-items">
+                <div class="tech-item"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="tech-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="tech-item"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="tech-item"><i class="fab fa-react"></i> React</div>
+              </div>
+            </div>
+            <div class="tech-category">
+              <h3>Backend</h3>
+              <div class="tech-items">
+                <div class="tech-item"><i class="fab fa-python"></i> Python</div>
+                <div class="tech-item"><i class="fas fa-flask"></i> Flask</div>
+                <div class="tech-item"><i class="fas fa-database"></i> PostgreSQL</div>
+                <div class="tech-item"><i class="fas fa-server"></i> RESTful APIs</div>
+              </div>
+            </div>
+            <div class="tech-category">
+              <h3>Machine Learning</h3>
+              <div class="tech-items">
+                <div class="tech-item"><i class="fas fa-brain"></i> TensorFlow</div>
+                <div class="tech-item"><i class="fas fa-cogs"></i> Scikit-learn</div>
+                <div class="tech-item"><i class="fas fa-table"></i> Pandas</div>
+                <div class="tech-item"><i class="fas fa-calculator"></i> NumPy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-section">
+          <h2>Contact</h2>
+          <p><i class="fas fa-envelope"></i> yasmienouazzine@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="copyright">
+    <p>&copy; 2024 by Yasmine Ouazzine</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/journey.js') }}"></script>
+</body>
+</html>

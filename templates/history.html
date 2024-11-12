@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/d06c559023.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Andika&family=Montserrat:wght@300;400;500;600&family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styl.css') }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}" />
+  <title>History</title>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/marsa maroc-logo.png') }}" alt="Logo"></a>
+    </div>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('history') }}">History</a></li>
+    <li><a href="{{ url_for('about') }}">About Us</a></li>
+    <li><a href="{{ url_for('myjourney') }}">Creator</a></li>
+    <li><a href="{{ url_for('Contact') }}">Contact Us</a></li>
+    </ul>
+    <div class="nav-image">
+      <img src="{{ url_for('static', filename='images/ys.png') }}" alt="Nav Image" />
+    </div>
+  </nav>
+
+  <div class="history-banner">
+    <img src="{{ url_for('static', filename='images/historytop2.png') }}" alt="Top Image" class="top-image" />
+    <h1>History</h1>
+  </div>
+  <header class="main-header">
+    <div class="introText">
+      <p>Welcome to the History page. Here you will learn more about the history and the legacy behind the evolution of the company MarsaMaroc.</p>
+    </div>  
+  </header>
+  
+  <section id="timeline">
+    <ul>
+      <h3>2021</h3>
+      <li>
+        <div>
+          <div>
+            <h2>Démarrage des opérations du terminal à conteneurs 3 au port de Tanger Med 2</h2>
+          </div>
+        </div>
+      </li>
+      <h3>2016</h3>
+      <li>
+        <div>
+          <div>
+            <h2>Mise en service du terminal à Conteneur 3 au port de Casablanca et du terminal polyvalent Quai Nord du port d’Agadir, respectivement par les filiales TC3PC et SMA</h2>
+          </div>
+        </div>
+      </li>
+      <h3>2016</h3>
+      <li>
+        <div>
+          <div>
+            <h2>Introduction de Marsa Maroc à la Bourse des Valeurs de Casablanca</h2>
+          </div>
+        </div>
+      </li>
+      <h3>2015</h3>
+      <li>
+        <div>
+          <div>
+            <h2>Certification de l’ensemble des sites opérationnels aux normes ISO 9001</h2>
+          </div>
+        </div>
+      </li>
+      <h3>2012</h3>
+      <li>
+        <div>
+          <div>
+            <h2>Inauguration de l’espace de stockage vertical pour voitures au port de Casablanca</h2>
+          </div>
+        </div>
+      </li>
+      <h3>2011</h3>
+      <li>
+        <div>
+          <div>
+            <h2>Exploitation d’un nouveau terminal polyvalent au port de Jorf Lasfar</h2>
+          </div>
+        </div>
+      </li>
+      <h3>2009</h3>
+      <li>
+        <div>
+          <div>
+            <h2>Obtention de la concession d’exploitation du TC4 du port de Tanger Med 2 (concession remplacée ultérieurement par celle portant sur l’exploitation du TC3 de TM2)</h2>
+          </div>
+        </div>
+      </li>
+      <h3>2006</h3>
+      <li>
+        <div>
+          <div>
+            <h2>Création de la Société d’Exploitation des Ports (SODEP), qui opère depuis 2007 sous le nom de marque « Marsa Maroc »</h2>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <footer id="copyright">
+    <p>&copy;2024 by Yasmine Ouazzine</p>
+</footer>
+</body>
+</html>

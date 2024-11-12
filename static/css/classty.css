@@ -1,0 +1,305 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.1px;
+    color: hsl(0, 0%, 63%);
+    font-family: "League Spartan", serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/static/images/port.jpg') no-repeat center center/cover;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 80px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: rgb(255, 252, 252);
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+}
+
+nav {
+    margin-top: 50px;
+    margin-left: 64px;
+    width: calc(100% - 64px);
+    color: black;
+    position: relative;
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+nav img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-image {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.nav-image img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+    position: relative;
+    margin: 0 20px;
+}
+
+li:after {
+    content: "";
+    position: absolute;
+    margin-left: 25%;
+    margin-bottom: 25%;
+    left: 0;
+    top: 125%;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width .3s ease-in-out;
+}
+
+li:hover:after {
+    width: 50%;
+}
+
+.mobile,
+input[type="checkbox"] {
+    display: none;
+}
+
+#contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.welcomeSection {
+    position: relative;
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcomeImage {
+    width: 100%;
+    max-width: 1000px;
+    opacity: 0.7;
+    display: block;
+}
+
+.welcomeText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+
+.infoSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.frame {
+    border: 2px solid black;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.uploadFrame {
+    display: none;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.carousel-slide {
+    display: flex;
+    overflow: hidden;
+    width: 55%;
+    justify-content: center;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    display: block;
+}
+
+
+.carousel-button {
+    background: none;
+    border: none;
+    font-size: 3em;
+    cursor: pointer;
+    outline: none;
+}
+
+.carousel-button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav img {
+        margin-bottom: 20px;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .nav-image {
+        margin: 10px 0;
+    }
+
+    #contentContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcomeSection, .infoSection {
+        margin: 0;
+    }
+
+    .welcomeImage {
+        width: 100%;
+        max-width: none;
+    }
+
+    .frame {
+        max-width: none;
+        width: 90%;
+    }
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+}
+
+.uploadedImage {
+    width: 100%;
+    max-width: 180px; /* Adjust this value as needed */
+    margin-top: 20px;
+    height: auto; /* Ensure the image maintains its aspect ratio */
+}
+
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.frame {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Existing styles here... */
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+  <title>About</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/marsa maroc-logo.png') }}" alt="Logo"></a>
+    </div>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('history') }}">History</a></li>
+    <li><a href="{{ url_for('about') }}">About Us</a></li>
+    <li><a href="{{ url_for('myjourney') }}">Creator</a></li>
+    <li><a href="{{ url_for('Contact') }}">Contact Us</a></li>
+    </ul>
+    <div class="nav-image">
+      <img src="{{ url_for('static', filename='images/ys.png') }}" alt="Nav Image">
+    </div>
+  </nav>
+  <div id="aboutContainer">
+    <div class="introText">
+      <p>Welcome to the SeaSight team page. Here you will learn more about the people behind this innovative project dedicated to enhancing maritime safety and security.</p>
+    </div>
+    <div class="aboutSection">
+      <img src="{{ url_for('static', filename='images/mypic.jpg') }}" alt="Creator" class="aboutImage">
+      <div class="aboutText">
+        <h1>About the Creator</h1>
+        <p>My name is Yasmine Ouazzine, a third-year student at ENSEM School of Software Engineering. I am passionate about combining development and machine learning to create innovative solutions. SeaSight is a testament to my dedication to leveraging technology to enhance maritime safety and security. Join me on this exciting journey as we explore new horizons in sea sighting.</p>
+      </div>
+    </div>
+    <div class="aboutSection">
+      <img src="{{ url_for('static', filename='images/encadrant.jpg') }}" alt="Supervisor" class="aboutImage">
+      <div class="aboutText">
+        <h1>About the Supervisor</h1>
+        <p>Ilyas Lamrani, my supervisor, played a crucial role throughout my project. He is distinguished by his remarkable flexibility and constant commitment to my success. Always available to answer questions and provide valuable advice, Ilyas adjusted his schedule to meet my needs. His ability to offer tailored support while allowing for significant autonomy greatly facilitated my progress. His availability and supportive approach were key in the successful completion of the project, enabling me to advance efficiently while benefiting from his expertise and encouragement.</p>
+      </div>
+    </div>
+    <div class="aboutSection">
+      <img src="{{ url_for('static', filename='images/team.jpg') }}" alt="Team" class="aboutImage">
+      <div class="aboutText">
+        <h1>About the Team</h1>
+        <p>The project team consisted of just myself and my supervisor, Ilyas Lamrani. Despite its small size, our collaboration proved highly effective. With Ilyas's invaluable guidance and support, I was able to successfully complete the project. His advice and assistance were crucial to the success of our mission.</p>
+      </div>
+    </div>
+  </div>
+  <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <div id="copyright">
+    <p>&copy;2024 by Yasmine Ouazzine</p>
+  </div>
+</body>
+</html>
